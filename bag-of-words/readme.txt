@@ -1,0 +1,1 @@
+Workspace for BagOfWords method of classification.
