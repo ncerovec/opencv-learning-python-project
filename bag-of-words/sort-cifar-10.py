@@ -7,7 +7,7 @@ s = os.path.sep
 dataFolder = 'DATA'
 csvClassFile = 'trainLabels.csv'
 trainSetFolder = 'train-set-cifar-10'
-sortedSetFolder = 'sorted-train-set-cifar-10'
+sortedSetFolder = 'sorted-full-set-cifar-10'
 fileType = '.png'
 
 with open(dataFolder+s+csvClassFile, 'rb') as csvfile:
