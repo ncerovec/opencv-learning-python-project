@@ -140,3 +140,13 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#BagOfWords descriptors
+*.pkl
+
+#PyCharm files
+bag-of-words/.idea/modules.xml
+bag-of-words/.idea/misc.xml
+bag-of-words/.idea/workspace.xml
+bag-of-words/.idea/inspectionProfiles/profiles_settings.xml
+bag-of-words/.idea/bag-of-words.iml
