@@ -2,7 +2,6 @@
 
 import argparse as ap
 import cv2
-import imutils 
 import numpy as np
 import os
 from sklearn.svm import LinearSVC
@@ -31,7 +30,7 @@ if args["testingSet"]:
         exit()
     for testing_name in testing_names:
         dir = os.path.join(test_path, testing_name)
-        class_path = imutils.imlist(dir)
+        class_path = [os.path.join(dir, f) for f in os.listdir(dir)]
         image_paths+=class_path
 else:
     image_paths = [args["image"]]
@@ -83,4 +82,4 @@ if args["visualize"]:
         print(prediction)
         cv2.putText(image, prediction, pt ,cv2.FONT_HERSHEY_PLAIN, 0.5, [255, 0, 0], 1)
         cv2.imshow("Image", image)
-        cv2.waitKey(3000)
+        cv2.waitKey(1000)

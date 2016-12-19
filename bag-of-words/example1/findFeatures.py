@@ -2,7 +2,6 @@
 
 import argparse as ap
 import cv2
-import imutils 
 import numpy as np
 import os
 from sklearn.svm import LinearSVC
@@ -26,7 +25,7 @@ image_classes = []
 class_id = 0
 for training_name in training_names:
     dir = os.path.join(train_path, training_name)
-    class_path = imutils.imlist(dir)
+    class_path = [os.path.join(dir, f) for f in os.listdir(dir)]
     image_paths+=class_path
     image_classes+=[class_id]*len(class_path)
     class_id+=1
