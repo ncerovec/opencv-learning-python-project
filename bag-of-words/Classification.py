@@ -42,7 +42,6 @@ des_ext = cv2.DescriptorExtractor_create("SIFT")
 
 # List where all the descriptors are stored
 des_list = []
-
 for image_path in image_paths:
     im = cv2.imread(image_path)
     if im is None:
@@ -50,14 +49,19 @@ for image_path in image_paths:
         exit()
     kpts = fea_det.detect(im)
     kpts, des = des_ext.compute(im, kpts)
-    des_list.append((image_path, des))   
+
+    if des is not None:
+        des_list.append((image_path, des))
+    else:
+        #des_list.append((image_path, []))
+        des_list.append((image_path, np.zeros((1, 128))))
     
 # Stack all the descriptors vertically in a numpy array
 descriptors = des_list[0][1]
 for image_path, descriptor in des_list[0:]:
     descriptors = np.vstack((descriptors, descriptor)) 
 
-# 
+# Calculate the histogram of features
 test_features = np.zeros((len(image_paths), k), "float32")
 for i in xrange(len(image_paths)):
     words, distance = vq(des_list[i][1],voc)
