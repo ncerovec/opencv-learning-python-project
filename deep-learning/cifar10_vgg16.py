@@ -1,40 +1,26 @@
-'''Train a simple deep CNN on the CIFAR10 small images dataset.
-GPU run command:
-    THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python cifar10_cnn.py
-It gets down to 0.65 test logloss in 25 epochs, and down to 0.55 after 50 epochs.
-(it's still underfitting at that point, though).
-Note: the data was pickled with Python 2, and some encoding issues might prevent you
-from loading it in Python 3. You might have to load it in Python 2,
-save it in a different format, load it in Python 3 and repickle it.
-'''
-
+import os
 import h5py
+from keras.utils import np_utils
 import numpy as np
+from keras.preprocessing.image import ImageDataGenerator
+from keras.optimizers import SGD
 from keras.models import Sequential
 from keras.layers import Convolution2D, MaxPooling2D, ZeroPadding2D
-from keras.layers import Dropout, Flatten, Dense
-from keras.optimizers import SGD
-from keras.utils import np_utils
+from keras.layers import Activation, Dropout, Flatten, Dense
 from keras.datasets import cifar10
 from keras import backend as K
 
 K.set_image_dim_ordering('th')
 
-# the data, shuffled and split between train and test sets
-(X_train, y_train), (X_test, y_test) = cifar10.load_data()
-print('X_train shape:', X_train.shape)
-print(X_train.shape[0], 'train samples')
-print(X_test.shape[0], 'test samples')
+# path to the model weights files.
+weights_path = 'vgg16_weights.h5'
+# dimensions of our images.
+img_width, img_height = 32, 32
 
-X_train = X_train.astype('float32')
-X_test = X_test.astype('float32')
-X_train /= 255
-X_test /= 255
-
-first_layer = ZeroPadding2D((1, 1), input_shape=(3, 32, 32))
+# build the VGG16 network
 model = Sequential()
+model.add(ZeroPadding2D((1, 1), input_shape=(3, img_width, img_height)))
 
-model.add(first_layer)
 model.add(Convolution2D(64, 3, 3, activation='relu', name='conv1_1'))
 model.add(ZeroPadding2D((1, 1)))
 model.add(Convolution2D(64, 3, 3, activation='relu', name='conv1_2'))
@@ -70,11 +56,11 @@ model.add(ZeroPadding2D((1, 1)))
 model.add(Convolution2D(512, 3, 3, activation='relu', name='conv5_3'))
 model.add(MaxPooling2D((2, 2), strides=(2, 2)))
 
-layer_dict = dict([(layer.name, layer) for layer in model.layers])
-
-# load the weights
-weights_path = 'vgg16_weights.h5'
-
+# load the weights of the VGG16 networks
+# (trained on ImageNet, won the ILSVRC competition in 2014)
+# note: when there is a complete match between your model definition
+# and your weight savefile, you can simply call model.load_weights(filename)
+assert os.path.exists(weights_path), 'Model weights not found (see "weights_path" variable in script).'
 f = h5py.File(weights_path)
 for k in range(f.attrs['nb_layers']):
     if k >= len(model.layers):
@@ -86,28 +72,47 @@ for k in range(f.attrs['nb_layers']):
 f.close()
 print('Model loaded.')
 
-train_data = model.predict(x=X_train)
-validation_data = model.predict(x=X_test)  # convert class vectors to binary class matrices
+# build a classifier model to put on top of the convolutional model
+top_model = Sequential()
+top_model.add(Flatten(input_shape=model.output_shape[1:]))
+top_model.add(Dense(512, activation='relu'))
+top_model.add(Dropout(0.2))
+top_model.add(Dense(10, activation='softmax'))
 
+model.add(top_model)
 
-Y_train = np_utils.to_categorical(y_train, 10)
-Y_test = np_utils.to_categorical(y_test, 10)
+for layer in model.layers[:25]:
+    layer.trainable = False
 
-#
-model0 = Sequential()
-model0.add(Flatten(input_shape=train_data.shape[1:]))
-model0.add(Dense(256, activation='relu'))
-model0.add(Dropout(0.4))
-model0.add(Dense(10, activation='softmax'))
+epochs = 25
+learning_rate = 0.01
+decay = learning_rate / epochs
+sgd = SGD(lr=learning_rate, momentum=0.9, decay=decay, nesterov=False)
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-#sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model0.compile(optimizer='rmsprop',
-               loss='categorical_crossentropy',
-               metrics=['accuracy'])
+train_datagen = ImageDataGenerator(
+    rescale=1. / 255,
+    shear_range=0.2,
+    zoom_range=0.2,
+    horizontal_flip=True)
 
-print('Fully connected layer loaded\n')
-print('Start training\n')
+test_datagen = ImageDataGenerator(rescale=1. / 255)
 
-model0.fit(train_data, Y_train,
-           nb_epoch=200, batch_size=32,
-           validation_data=(validation_data, Y_test))
+(X_train, y_train), (X_test, y_test) = cifar10.load_data()
+
+y_train = np_utils.to_categorical(y_train)
+y_test = np_utils.to_categorical(y_test)
+
+num_classes = y_test.shape[1]
+
+train_generator = train_datagen.flow(X_train, y_train, batch_size=64)
+
+validation_generator = test_datagen.flow(X_test, y_test, batch_size=64)
+
+# fine-tune the model
+model.fit_generator(
+    train_generator,
+    samples_per_epoch=50000,
+    nb_epoch=epochs,
+    validation_data=validation_generator,
+    nb_val_samples=300000)

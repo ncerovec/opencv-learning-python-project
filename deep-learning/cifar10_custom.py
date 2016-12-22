@@ -49,7 +49,7 @@ model.add(Dense(512, activation='relu', W_constraint=maxnorm(3)))
 model.add(Dropout(0.2))
 model.add(Dense(num_classes, activation='softmax'))
 
-epochs = 250
+epochs = 25
 learning_rate = 0.01
 decay = learning_rate/epochs
 sgd = SGD(lr=learning_rate, momentum=0.9, decay=decay, nesterov=False)
