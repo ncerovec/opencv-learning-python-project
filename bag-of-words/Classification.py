@@ -4,6 +4,7 @@ import argparse as ap
 import cv2
 import numpy as np
 import os
+from random import randint
 from sklearn.svm import LinearSVC
 from sklearn.externals import joblib
 from scipy.cluster.vq import *
@@ -81,7 +82,8 @@ predictions = []
 for image_path, i in zip(image_paths, clf.predict(test_features)):
     prediction = classes_names[i]
     predictions.append(prediction)
-    #print prediction + " = " + os.path.basename(os.path.dirname(image_path))
+    #prediction = classes_names[randint(0,len(classes_names)-1)]   #Test random prediction accuracy
+    #print prediction + " == " + os.path.basename(os.path.dirname(image_path))
     if os.path.basename(os.path.dirname(image_path)) == prediction:
         numCorrect += 1
 
@@ -95,7 +97,7 @@ if args["visualize"]:
         image = cv2.imread(image_path)
         cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
         pt = (0, 3 * image.shape[0] // 4)
-        print(prediction)
         cv2.putText(image, prediction, pt ,cv2.FONT_HERSHEY_PLAIN, 0.5, [255, 0, 0], 1)
         cv2.imshow("Image", image)
+        print prediction + " == " + os.path.basename(os.path.dirname(image_path))
         cv2.waitKey(1000)
