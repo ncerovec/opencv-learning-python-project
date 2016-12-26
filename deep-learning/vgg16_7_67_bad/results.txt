@@ -1,0 +1,26 @@
+default sgd stopped to early probably
+
+
+
+
+
+"C:\Program Files\Anaconda2\python.exe" D:/Projects/VCOM/opencv-learning-python-project/deep-learning/cifar10_vgg16.py
+Using Theano backend.
+Using gpu device 0: GeForce GTX 860M (CNMeM is enabled with initial size: 82.5% of memory, cuDNN 5005)
+Model loaded.
+Epoch 1/50
+382s - loss: 1.8996 - acc: 0.3034 - val_loss: 1.3284 - val_acc: 0.5175
+Epoch 2/50
+385s - loss: 1.4215 - acc: 0.5029 - val_loss: 1.4077 - val_acc: 0.5227
+Epoch 3/50
+394s - loss: 1.2442 - acc: 0.5818 - val_loss: 1.0324 - val_acc: 0.6427
+Epoch 4/50
+393s - loss: 1.1454 - acc: 0.6151 - val_loss: 0.9783 - val_acc: 0.6644
+Epoch 5/50
+397s - loss: 1.0781 - acc: 0.6419 - val_loss: 0.9429 - val_acc: 0.6766
+Epoch 6/50
+379s - loss: 1.0231 - acc: 0.6617 - val_loss: 1.0538 - val_acc: 0.6429
+Epoch 7/50
+
+Process finished with exit code 1
+

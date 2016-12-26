@@ -8,6 +8,8 @@ __pycache__/
 
 .idea/
 
+.h5
+
 # Distribution / packaging
 .Python
 env/

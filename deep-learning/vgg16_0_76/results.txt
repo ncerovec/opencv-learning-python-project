@@ -1,0 +1,70 @@
+Ran for 4+ hours stuck at 76% and starts overfitting
+"C:\Program Files\Anaconda2\python.exe" D:/Projects/VCOM/opencv-learning-python-project/deep-learning/cifar10_vgg16.py
+Using Theano backend.
+Using gpu device 0: GeForce GTX 860M (CNMeM is enabled with initial size: 82.5% of memory, cuDNN 5005)
+Model loaded.
+Epoch 1/50
+412s - loss: 1.3061 - acc: 0.5455 - val_loss: 1.0180 - val_acc: 0.6452
+Epoch 2/50
+421s - loss: 1.0179 - acc: 0.6500 - val_loss: 0.8854 - val_acc: 0.6961
+Epoch 3/50
+423s - loss: 0.9066 - acc: 0.6851 - val_loss: 0.8691 - val_acc: 0.6991
+Epoch 4/50
+421s - loss: 0.8472 - acc: 0.7060 - val_loss: 0.8484 - val_acc: 0.7113
+Epoch 5/50
+419s - loss: 0.7965 - acc: 0.7219 - val_loss: 0.7484 - val_acc: 0.7393
+Epoch 6/50
+419s - loss: 0.7543 - acc: 0.7370 - val_loss: 0.7407 - val_acc: 0.7454
+Epoch 7/50
+420s - loss: 0.7200 - acc: 0.7473 - val_loss: 0.7382 - val_acc: 0.7415
+Epoch 8/50
+423s - loss: 0.6847 - acc: 0.7592 - val_loss: 0.7108 - val_acc: 0.7521
+Epoch 9/50
+423s - loss: 0.6605 - acc: 0.7658 - val_loss: 0.7515 - val_acc: 0.7404
+Epoch 10/50
+419s - loss: 0.6296 - acc: 0.7791 - val_loss: 0.7070 - val_acc: 0.7528
+Epoch 11/50
+426s - loss: 0.6047 - acc: 0.7859 - val_loss: 0.6791 - val_acc: 0.7638
+Epoch 12/50
+421s - loss: 0.5810 - acc: 0.7951 - val_loss: 0.7074 - val_acc: 0.7594
+Epoch 13/50
+415s - loss: 0.5584 - acc: 0.8025 - val_loss: 0.6834 - val_acc: 0.7707
+Epoch 14/50
+420s - loss: 0.5430 - acc: 0.8084 - val_loss: 0.6996 - val_acc: 0.7590
+Epoch 15/50
+418s - loss: 0.5203 - acc: 0.8133 - val_loss: 0.6969 - val_acc: 0.7644
+Epoch 16/50
+423s - loss: 0.5035 - acc: 0.8213 - val_loss: 0.7056 - val_acc: 0.7636
+Epoch 17/50
+423s - loss: 0.4797 - acc: 0.8296 - val_loss: 0.7217 - val_acc: 0.7627
+Epoch 18/50
+419s - loss: 0.4600 - acc: 0.8347 - val_loss: 0.7102 - val_acc: 0.7656
+Epoch 19/50
+422s - loss: 0.4398 - acc: 0.8435 - val_loss: 0.7017 - val_acc: 0.7652
+Epoch 20/50
+414s - loss: 0.4237 - acc: 0.8482 - val_loss: 0.7373 - val_acc: 0.7668
+Epoch 21/50
+415s - loss: 0.4111 - acc: 0.8526 - val_loss: 0.7504 - val_acc: 0.7647
+Epoch 22/50
+419s - loss: 0.3953 - acc: 0.8587 - val_loss: 0.7259 - val_acc: 0.7714
+Epoch 23/50
+412s - loss: 0.3765 - acc: 0.8642 - val_loss: 0.7318 - val_acc: 0.7699
+Epoch 24/50
+419s - loss: 0.3629 - acc: 0.8700 - val_loss: 0.7819 - val_acc: 0.7651
+Epoch 25/50
+425s - loss: 0.3517 - acc: 0.8736 - val_loss: 0.7583 - val_acc: 0.7669
+Epoch 26/50
+420s - loss: 0.3369 - acc: 0.8803 - val_loss: 0.7767 - val_acc: 0.7684
+Epoch 27/50
+455s - loss: 0.3189 - acc: 0.8859 - val_loss: 0.7908 - val_acc: 0.7691
+Epoch 28/50
+425s - loss: 0.3074 - acc: 0.8914 - val_loss: 0.8164 - val_acc: 0.7649
+Epoch 29/50
+421s - loss: 0.3008 - acc: 0.8918 - val_loss: 0.8154 - val_acc: 0.7687
+Epoch 30/50
+418s - loss: 0.2843 - acc: 0.8978 - val_loss: 0.8225 - val_acc: 0.7670
+Epoch 31/50
+422s - loss: 0.2754 - acc: 0.9025 - val_loss: 0.8433 - val_acc: 0.7683
+Epoch 32/50
+
+Process finished with exit code 1

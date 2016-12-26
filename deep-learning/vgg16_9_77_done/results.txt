@@ -1,0 +1,109 @@
+overfittign as f...
+
+
+"C:\Program Files\Anaconda2\python.exe" D:/Projects/VCOM/opencv-learning-python-project/deep-learning/cifar10_vgg16.py
+Using Theano backend.
+Using gpu device 0: GeForce GTX 860M (CNMeM is enabled with initial size: 82.5% of memory, cuDNN 5005)
+Model loaded.
+Epoch 1/50
+373s - loss: 1.3287 - acc: 0.5411 - val_loss: 0.9835 - val_acc: 0.6593
+Epoch 2/50
+373s - loss: 1.0317 - acc: 0.6473 - val_loss: 0.8933 - val_acc: 0.6951
+Epoch 3/50
+373s - loss: 0.9366 - acc: 0.6796 - val_loss: 0.8223 - val_acc: 0.7225
+Epoch 4/50
+372s - loss: 0.8698 - acc: 0.7031 - val_loss: 0.7719 - val_acc: 0.7346
+Epoch 5/50
+373s - loss: 0.8179 - acc: 0.7179 - val_loss: 0.7709 - val_acc: 0.7346
+Epoch 6/50
+373s - loss: 0.7774 - acc: 0.7294 - val_loss: 0.7550 - val_acc: 0.7377
+Epoch 7/50
+373s - loss: 0.7435 - acc: 0.7438 - val_loss: 0.7615 - val_acc: 0.7362
+Epoch 8/50
+373s - loss: 0.7098 - acc: 0.7540 - val_loss: 0.7098 - val_acc: 0.7557
+Epoch 9/50
+373s - loss: 0.6810 - acc: 0.7621 - val_loss: 0.7573 - val_acc: 0.7369
+Epoch 10/50
+373s - loss: 0.6498 - acc: 0.7728 - val_loss: 0.6894 - val_acc: 0.7645
+Epoch 11/50
+373s - loss: 0.6313 - acc: 0.7769 - val_loss: 0.7052 - val_acc: 0.7593
+Epoch 12/50
+373s - loss: 0.6139 - acc: 0.7866 - val_loss: 0.6965 - val_acc: 0.7598
+Epoch 13/50
+373s - loss: 0.5864 - acc: 0.7936 - val_loss: 0.6913 - val_acc: 0.7637
+Epoch 14/50
+373s - loss: 0.5641 - acc: 0.8009 - val_loss: 0.7436 - val_acc: 0.7505
+Epoch 15/50
+373s - loss: 0.5467 - acc: 0.8078 - val_loss: 0.6886 - val_acc: 0.7663
+Epoch 16/50
+373s - loss: 0.5328 - acc: 0.8108 - val_loss: 0.7228 - val_acc: 0.7577
+Epoch 17/50
+373s - loss: 0.5033 - acc: 0.8213 - val_loss: 0.6967 - val_acc: 0.7706
+Epoch 18/50
+373s - loss: 0.4883 - acc: 0.8282 - val_loss: 0.7102 - val_acc: 0.7588
+Epoch 19/50
+373s - loss: 0.4742 - acc: 0.8312 - val_loss: 0.6978 - val_acc: 0.7719
+Epoch 20/50
+373s - loss: 0.4553 - acc: 0.8388 - val_loss: 0.6902 - val_acc: 0.7724
+Epoch 21/50
+373s - loss: 0.4371 - acc: 0.8431 - val_loss: 0.7470 - val_acc: 0.7656
+Epoch 22/50
+374s - loss: 0.4259 - acc: 0.8501 - val_loss: 0.7330 - val_acc: 0.7679
+Epoch 23/50
+375s - loss: 0.4141 - acc: 0.8523 - val_loss: 0.7542 - val_acc: 0.7606
+Epoch 24/50
+373s - loss: 0.3935 - acc: 0.8621 - val_loss: 0.7451 - val_acc: 0.7701
+Epoch 25/50
+372s - loss: 0.3779 - acc: 0.8673 - val_loss: 0.7552 - val_acc: 0.7645
+Epoch 26/50
+373s - loss: 0.3635 - acc: 0.8699 - val_loss: 0.7710 - val_acc: 0.7678
+Epoch 27/50
+373s - loss: 0.3540 - acc: 0.8737 - val_loss: 0.7586 - val_acc: 0.7674
+Epoch 28/50
+372s - loss: 0.3413 - acc: 0.8784 - val_loss: 0.7803 - val_acc: 0.7686
+Epoch 29/50
+374s - loss: 0.3276 - acc: 0.8837 - val_loss: 0.7744 - val_acc: 0.7715
+Epoch 30/50
+373s - loss: 0.3155 - acc: 0.8890 - val_loss: 0.8312 - val_acc: 0.7646
+Epoch 31/50
+374s - loss: 0.3062 - acc: 0.8940 - val_loss: 0.7840 - val_acc: 0.7726
+Epoch 32/50
+373s - loss: 0.2936 - acc: 0.8942 - val_loss: 0.8210 - val_acc: 0.7667
+Epoch 33/50
+373s - loss: 0.2757 - acc: 0.9031 - val_loss: 0.8182 - val_acc: 0.7716
+Epoch 34/50
+373s - loss: 0.2708 - acc: 0.9051 - val_loss: 0.8613 - val_acc: 0.7640
+Epoch 35/50
+373s - loss: 0.2615 - acc: 0.9076 - val_loss: 0.8527 - val_acc: 0.7657
+Epoch 36/50
+372s - loss: 0.2535 - acc: 0.9116 - val_loss: 0.8463 - val_acc: 0.7696
+Epoch 37/50
+373s - loss: 0.2369 - acc: 0.9178 - val_loss: 0.8603 - val_acc: 0.7710
+Epoch 38/50
+373s - loss: 0.2323 - acc: 0.9175 - val_loss: 0.8832 - val_acc: 0.7679
+Epoch 39/50
+373s - loss: 0.2247 - acc: 0.9206 - val_loss: 0.8771 - val_acc: 0.7698
+Epoch 40/50
+372s - loss: 0.2116 - acc: 0.9251 - val_loss: 0.9203 - val_acc: 0.7669
+Epoch 41/50
+372s - loss: 0.2098 - acc: 0.9253 - val_loss: 0.9239 - val_acc: 0.7678
+Epoch 42/50
+372s - loss: 0.2053 - acc: 0.9272 - val_loss: 0.9290 - val_acc: 0.7654
+Epoch 43/50
+373s - loss: 0.1921 - acc: 0.9330 - val_loss: 0.9298 - val_acc: 0.7631
+Epoch 44/50
+373s - loss: 0.1882 - acc: 0.9346 - val_loss: 0.9570 - val_acc: 0.7641
+Epoch 45/50
+373s - loss: 0.1778 - acc: 0.9380 - val_loss: 0.9447 - val_acc: 0.7698
+Epoch 46/50
+373s - loss: 0.1776 - acc: 0.9376 - val_loss: 0.9379 - val_acc: 0.7735
+Epoch 47/50
+373s - loss: 0.1687 - acc: 0.9416 - val_loss: 0.9579 - val_acc: 0.7701
+Epoch 48/50
+373s - loss: 0.1629 - acc: 0.9430 - val_loss: 0.9847 - val_acc: 0.7681
+Epoch 49/50
+373s - loss: 0.1549 - acc: 0.9471 - val_loss: 0.9460 - val_acc: 0.7754
+Epoch 50/50
+373s - loss: 0.1551 - acc: 0.9462 - val_loss: 0.9918 - val_acc: 0.7727
+
+Process finished with exit code 0

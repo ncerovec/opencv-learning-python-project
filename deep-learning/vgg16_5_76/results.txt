@@ -1,0 +1,46 @@
+first run with adadelta optimizer gets o 76% and dead
+
+
+"C:\Program Files\Anaconda2\python.exe" D:/Projects/VCOM/opencv-learning-python-project/deep-learning/cifar10_vgg16.py
+Using Theano backend.
+Using gpu device 0: GeForce GTX 860M (CNMeM is enabled with initial size: 82.5% of memory, cuDNN 5005)
+Model loaded.
+Epoch 1/50
+383s - loss: 1.3475 - acc: 0.5382 - val_loss: 1.0871 - val_acc: 0.6170
+Epoch 2/50
+377s - loss: 0.9865 - acc: 0.6664 - val_loss: 0.9443 - val_acc: 0.6706
+Epoch 3/50
+377s - loss: 0.8903 - acc: 0.6984 - val_loss: 0.8878 - val_acc: 0.6940
+Epoch 4/50
+377s - loss: 0.8274 - acc: 0.7192 - val_loss: 0.8771 - val_acc: 0.6922
+Epoch 5/50
+379s - loss: 0.7791 - acc: 0.7354 - val_loss: 0.8033 - val_acc: 0.7242
+Epoch 6/50
+378s - loss: 0.7394 - acc: 0.7473 - val_loss: 0.7755 - val_acc: 0.7366
+Epoch 7/50
+378s - loss: 0.7127 - acc: 0.7573 - val_loss: 0.8262 - val_acc: 0.7276
+Epoch 8/50
+378s - loss: 0.6794 - acc: 0.7698 - val_loss: 0.7974 - val_acc: 0.7329
+Epoch 9/50
+383s - loss: 0.6603 - acc: 0.7741 - val_loss: 0.7779 - val_acc: 0.7436
+Epoch 10/50
+379s - loss: 0.6400 - acc: 0.7828 - val_loss: 0.7797 - val_acc: 0.7436
+Epoch 11/50
+379s - loss: 0.6200 - acc: 0.7932 - val_loss: 0.7343 - val_acc: 0.7538
+Epoch 12/50
+388s - loss: 0.5991 - acc: 0.7971 - val_loss: 0.7344 - val_acc: 0.7595
+Epoch 13/50
+388s - loss: 0.5862 - acc: 0.8030 - val_loss: 0.7261 - val_acc: 0.7642
+Epoch 14/50
+382s - loss: 0.5690 - acc: 0.8094 - val_loss: 0.8085 - val_acc: 0.7501
+Epoch 15/50
+388s - loss: 0.5568 - acc: 0.8125 - val_loss: 0.7200 - val_acc: 0.7649
+Epoch 16/50
+386s - loss: 0.5462 - acc: 0.8158 - val_loss: 0.7608 - val_acc: 0.7608
+Epoch 17/50
+382s - loss: 0.5266 - acc: 0.8249 - val_loss: 0.7813 - val_acc: 0.7639
+Epoch 18/50
+378s - loss: 0.5215 - acc: 0.8269 - val_loss: 0.8037 - val_acc: 0.7449
+Epoch 19/50
+
+Process finished with exit code 1

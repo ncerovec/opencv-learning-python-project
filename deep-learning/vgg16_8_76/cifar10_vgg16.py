@@ -75,10 +75,10 @@ print('Model loaded.')
 # build a classifier model to put on top of the convolutional model
 top_model = Sequential()
 top_model.add(Flatten(input_shape=model.output_shape[1:]))
-top_model.add(Dense(1024, activation='relu', W_constraint=maxnorm(3)))
-top_model.add(Dropout(0.4))
-top_model.add(Dense(512, activation='relu', W_constraint=maxnorm(3)))
-top_model.add(Dropout(0.4))
+top_model.add(Dense(4096, activation='relu'))
+top_model.add(Dropout(0.75))
+top_model.add(Dense(4096, activation='relu'))
+top_model.add(Dropout(0.75))
 top_model.add(Dense(10, activation='softmax'))
 
 model.add(top_model)
@@ -89,15 +89,13 @@ for layer in model.layers[:25]:
 epochs = 50
 learning_rate = 0.01
 decay = learning_rate / epochs
-sgd = SGD(lr=learning_rate, momentum=0.9, decay=decay)
+sgd = SGD(lr=learning_rate, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 train_datagen = ImageDataGenerator(
     rescale=1. / 255,
     shear_range=0.2,
     zoom_range=0.2,
-    rotation_range=0.2,
-    channel_shift_range=0.2,
     horizontal_flip=True)
 
 test_datagen = ImageDataGenerator(rescale=1. / 255)

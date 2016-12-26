@@ -155,7 +155,7 @@ if __name__ == '__main__':
                                          png_filename='grid_res_img_file.png')
 
     print "--------------------"
-    print "## outputting results"
+    print "## outputting results.txt"
     print "model file: " + datasetpath + model_file
     print "codebook file: " + datasetpath + CODEBOOK_FILE
     print "category      ==>  label"

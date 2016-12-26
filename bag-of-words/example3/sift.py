@@ -20,7 +20,7 @@ WRITE_VERBOSE = False  # no verbose reading atm
 
 
 def process_image(imagename, resultname='temp.sift', dense=False):    
-    """ process an image and save the results in a .key ascii file"""
+    """ process an image and save the results.txt in a .key ascii file"""
     print "working on ", imagename
     if dense == False:
         if imagename[-3:] != 'pgm':

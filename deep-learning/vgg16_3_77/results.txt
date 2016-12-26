@@ -1,0 +1,54 @@
+gets to 77% and starts underfitting
+
+
+
+"C:\Program Files\Anaconda2\python.exe" D:/Projects/VCOM/opencv-learning-python-project/deep-learning/cifar10_vgg16.py
+Using Theano backend.
+Using gpu device 0: GeForce GTX 860M (CNMeM is enabled with initial size: 82.5% of memory, cuDNN 5005)
+Model loaded.
+Epoch 1/50
+382s - loss: 1.4865 - acc: 0.4801 - val_loss: 1.2501 - val_acc: 0.5745
+Epoch 2/50
+384s - loss: 1.1090 - acc: 0.6284 - val_loss: 0.9246 - val_acc: 0.6926
+Epoch 3/50
+388s - loss: 0.9942 - acc: 0.6663 - val_loss: 0.8619 - val_acc: 0.7004
+Epoch 4/50
+381s - loss: 0.9237 - acc: 0.6892 - val_loss: 0.8038 - val_acc: 0.7267
+Epoch 5/50
+384s - loss: 0.8711 - acc: 0.7038 - val_loss: 0.8151 - val_acc: 0.7213
+Epoch 6/50
+383s - loss: 0.8318 - acc: 0.7188 - val_loss: 0.7869 - val_acc: 0.7322
+Epoch 7/50
+384s - loss: 0.7920 - acc: 0.7312 - val_loss: 0.7382 - val_acc: 0.7469
+Epoch 8/50
+383s - loss: 0.7592 - acc: 0.7392 - val_loss: 0.7235 - val_acc: 0.7539
+Epoch 9/50
+382s - loss: 0.7321 - acc: 0.7493 - val_loss: 0.7190 - val_acc: 0.7525
+Epoch 10/50
+385s - loss: 0.7038 - acc: 0.7574 - val_loss: 0.7104 - val_acc: 0.7521
+Epoch 11/50
+386s - loss: 0.6872 - acc: 0.7639 - val_loss: 0.7024 - val_acc: 0.7553
+Epoch 12/50
+382s - loss: 0.6652 - acc: 0.7710 - val_loss: 0.6760 - val_acc: 0.7677
+Epoch 13/50
+385s - loss: 0.6441 - acc: 0.7782 - val_loss: 0.6753 - val_acc: 0.7634
+Epoch 14/50
+379s - loss: 0.6213 - acc: 0.7831 - val_loss: 0.6853 - val_acc: 0.7639
+Epoch 15/50
+382s - loss: 0.6076 - acc: 0.7909 - val_loss: 0.6762 - val_acc: 0.7672
+Epoch 16/50
+382s - loss: 0.5934 - acc: 0.7941 - val_loss: 0.6697 - val_acc: 0.7705
+Epoch 17/50
+382s - loss: 0.5756 - acc: 0.8010 - val_loss: 0.6705 - val_acc: 0.7742
+Epoch 18/50
+382s - loss: 0.5544 - acc: 0.8090 - val_loss: 0.6864 - val_acc: 0.7661
+Epoch 19/50
+385s - loss: 0.5376 - acc: 0.8118 - val_loss: 0.6710 - val_acc: 0.7740
+Epoch 20/50
+384s - loss: 0.5251 - acc: 0.8183 - val_loss: 0.6772 - val_acc: 0.7703
+Epoch 21/50
+383s - loss: 0.5114 - acc: 0.8219 - val_loss: 0.6739 - val_acc: 0.7751
+Epoch 22/50
+
+Process finished with exit code 1
+

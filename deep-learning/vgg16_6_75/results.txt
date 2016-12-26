@@ -1,0 +1,39 @@
+fluctuates too much around 74-75%
+
+
+
+"C:\Program Files\Anaconda2\python.exe" D:/Projects/VCOM/opencv-learning-python-project/deep-learning/cifar10_vgg16.py
+Using Theano backend.
+Using gpu device 0: GeForce GTX 860M (CNMeM is enabled with initial size: 82.5% of memory, cuDNN 5005)
+Model loaded.
+Epoch 1/50
+384s - loss: 1.8757 - acc: 0.3010 - val_loss: 1.4128 - val_acc: 0.4750
+Epoch 2/50
+378s - loss: 1.2701 - acc: 0.5693 - val_loss: 1.0560 - val_acc: 0.6504
+Epoch 3/50
+378s - loss: 1.0537 - acc: 0.6577 - val_loss: 0.9550 - val_acc: 0.6839
+Epoch 4/50
+377s - loss: 0.9620 - acc: 0.6859 - val_loss: 0.9501 - val_acc: 0.6854
+Epoch 5/50
+378s - loss: 0.9066 - acc: 0.7035 - val_loss: 0.8555 - val_acc: 0.7122
+Epoch 6/50
+376s - loss: 0.8613 - acc: 0.7163 - val_loss: 0.9147 - val_acc: 0.6924
+Epoch 7/50
+378s - loss: 0.8335 - acc: 0.7290 - val_loss: 0.8393 - val_acc: 0.7132
+Epoch 8/50
+378s - loss: 0.8035 - acc: 0.7373 - val_loss: 0.8065 - val_acc: 0.7343
+Epoch 9/50
+386s - loss: 0.7847 - acc: 0.7447 - val_loss: 0.7932 - val_acc: 0.7337
+Epoch 10/50
+378s - loss: 0.7514 - acc: 0.7515 - val_loss: 0.7932 - val_acc: 0.7374
+Epoch 11/50
+378s - loss: 0.7404 - acc: 0.7594 - val_loss: 0.7541 - val_acc: 0.7532
+Epoch 12/50
+378s - loss: 0.7246 - acc: 0.7635 - val_loss: 0.7913 - val_acc: 0.7484
+Epoch 13/50
+383s - loss: 0.7135 - acc: 0.7689 - val_loss: 0.8220 - val_acc: 0.7291
+Epoch 14/50
+381s - loss: 0.7000 - acc: 0.7704 - val_loss: 0.7742 - val_acc: 0.7546
+Epoch 15/50
+
+Process finished with exit code 1
