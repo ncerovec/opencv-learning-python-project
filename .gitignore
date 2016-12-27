@@ -8,7 +8,7 @@ __pycache__/
 
 .idea/
 
-.h5
+*.h5
 
 # Distribution / packaging
 .Python
