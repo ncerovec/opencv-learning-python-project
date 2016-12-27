@@ -1,0 +1,218 @@
+"C:\Program Files\Anaconda2\python.exe" D:/Projects/VCOM/opencv-learning-python-project/deep-learning/cifar10_custom.py
+Using Theano backend.
+Using gpu device 0: GeForce GTX 860M (CNMeM is enabled with initial size: 82.5% of memory, cuDNN 5005)
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to
+====================================================================================================
+convolution2d_1 (Convolution2D)  (None, 32, 32, 32)    896         convolution2d_input_1[0][0]
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 32, 32, 32)    0           convolution2d_1[0][0]
+____________________________________________________________________________________________________
+convolution2d_2 (Convolution2D)  (None, 32, 32, 32)    9248        dropout_1[0][0]
+____________________________________________________________________________________________________
+maxpooling2d_1 (MaxPooling2D)    (None, 32, 16, 16)    0           convolution2d_2[0][0]
+____________________________________________________________________________________________________
+convolution2d_3 (Convolution2D)  (None, 64, 16, 16)    18496       maxpooling2d_1[0][0]
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 64, 16, 16)    0           convolution2d_3[0][0]
+____________________________________________________________________________________________________
+convolution2d_4 (Convolution2D)  (None, 64, 16, 16)    36928       dropout_2[0][0]
+____________________________________________________________________________________________________
+maxpooling2d_2 (MaxPooling2D)    (None, 64, 8, 8)      0           convolution2d_4[0][0]
+____________________________________________________________________________________________________
+convolution2d_5 (Convolution2D)  (None, 128, 8, 8)     73856       maxpooling2d_2[0][0]
+____________________________________________________________________________________________________
+dropout_3 (Dropout)              (None, 128, 8, 8)     0           convolution2d_5[0][0]
+____________________________________________________________________________________________________
+convolution2d_6 (Convolution2D)  (None, 128, 8, 8)     147584      dropout_3[0][0]
+____________________________________________________________________________________________________
+maxpooling2d_3 (MaxPooling2D)    (None, 128, 4, 4)     0           convolution2d_6[0][0]
+____________________________________________________________________________________________________
+convolution2d_7 (Convolution2D)  (None, 256, 4, 4)     295168      maxpooling2d_3[0][0]
+____________________________________________________________________________________________________
+dropout_4 (Dropout)              (None, 256, 4, 4)     0           convolution2d_7[0][0]
+____________________________________________________________________________________________________
+convolution2d_8 (Convolution2D)  (None, 256, 4, 4)     590080      dropout_4[0][0]
+____________________________________________________________________________________________________
+maxpooling2d_4 (MaxPooling2D)    (None, 256, 2, 2)     0           convolution2d_8[0][0]
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 1024)          0           maxpooling2d_4[0][0]
+____________________________________________________________________________________________________
+dropout_5 (Dropout)              (None, 1024)          0           flatten_1[0][0]
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 1024)          1049600     dropout_5[0][0]
+____________________________________________________________________________________________________
+dropout_6 (Dropout)              (None, 1024)          0           dense_1[0][0]
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 512)           524800      dropout_6[0][0]
+____________________________________________________________________________________________________
+dropout_7 (Dropout)              (None, 512)           0           dense_2[0][0]
+____________________________________________________________________________________________________
+dense_3 (Dense)                  (None, 10L)           5130        dropout_7[0][0]
+====================================================================================================
+Total params: 2751786
+____________________________________________________________________________________________________
+None
+Epoch 1/80
+166s - loss: 2.3198 - acc: 0.1020 - val_loss: 2.3020 - val_acc: 0.1402
+Epoch 2/80
+167s - loss: 2.2648 - acc: 0.1314 - val_loss: 2.1012 - val_acc: 0.1834
+Epoch 3/80
+170s - loss: 1.9180 - acc: 0.2702 - val_loss: 1.7850 - val_acc: 0.3417
+Epoch 4/80
+168s - loss: 1.7154 - acc: 0.3657 - val_loss: 1.8002 - val_acc: 0.3482
+Epoch 5/80
+167s - loss: 1.6030 - acc: 0.4105 - val_loss: 1.6199 - val_acc: 0.4137
+Epoch 6/80
+166s - loss: 1.5131 - acc: 0.4485 - val_loss: 1.5436 - val_acc: 0.4260
+Epoch 7/80
+168s - loss: 1.4274 - acc: 0.4840 - val_loss: 1.5118 - val_acc: 0.4852
+Epoch 8/80
+168s - loss: 1.3655 - acc: 0.5108 - val_loss: 1.4421 - val_acc: 0.4899
+Epoch 9/80
+166s - loss: 1.3048 - acc: 0.5349 - val_loss: 1.2450 - val_acc: 0.5694
+Epoch 10/80
+166s - loss: 1.2685 - acc: 0.5488 - val_loss: 1.2687 - val_acc: 0.5779
+Epoch 11/80
+169s - loss: 1.2257 - acc: 0.5651 - val_loss: 1.2677 - val_acc: 0.5750
+Epoch 12/80
+167s - loss: 1.1840 - acc: 0.5811 - val_loss: 1.1475 - val_acc: 0.6000
+Epoch 13/80
+167s - loss: 1.1388 - acc: 0.5994 - val_loss: 1.0768 - val_acc: 0.6237
+Epoch 14/80
+166s - loss: 1.1152 - acc: 0.6100 - val_loss: 1.0865 - val_acc: 0.6327
+Epoch 15/80
+180s - loss: 1.0853 - acc: 0.6196 - val_loss: 1.0309 - val_acc: 0.6450
+Epoch 16/80
+169s - loss: 1.0508 - acc: 0.6331 - val_loss: 1.0020 - val_acc: 0.6542
+Epoch 17/80
+166s - loss: 1.0197 - acc: 0.6456 - val_loss: 1.0344 - val_acc: 0.6555
+Epoch 18/80
+166s - loss: 1.0027 - acc: 0.6509 - val_loss: 0.8776 - val_acc: 0.7044
+Epoch 19/80
+170s - loss: 0.9785 - acc: 0.6604 - val_loss: 0.9389 - val_acc: 0.6877
+Epoch 20/80
+167s - loss: 0.9621 - acc: 0.6642 - val_loss: 0.9186 - val_acc: 0.6843
+Epoch 21/80
+166s - loss: 0.9345 - acc: 0.6736 - val_loss: 0.9184 - val_acc: 0.6803
+Epoch 22/80
+166s - loss: 0.9126 - acc: 0.6840 - val_loss: 0.8683 - val_acc: 0.7110
+Epoch 23/80
+168s - loss: 0.8965 - acc: 0.6887 - val_loss: 0.8829 - val_acc: 0.7145
+Epoch 24/80
+168s - loss: 0.8775 - acc: 0.6960 - val_loss: 0.8868 - val_acc: 0.7063
+Epoch 25/80
+166s - loss: 0.8572 - acc: 0.7057 - val_loss: 0.8253 - val_acc: 0.7262
+Epoch 26/80
+166s - loss: 0.8514 - acc: 0.7055 - val_loss: 0.8049 - val_acc: 0.7361
+Epoch 27/80
+170s - loss: 0.8336 - acc: 0.7135 - val_loss: 0.8304 - val_acc: 0.7251
+Epoch 28/80
+168s - loss: 0.8228 - acc: 0.7129 - val_loss: 0.7963 - val_acc: 0.7317
+Epoch 29/80
+166s - loss: 0.8099 - acc: 0.7215 - val_loss: 0.8060 - val_acc: 0.7352
+Epoch 30/80
+166s - loss: 0.8003 - acc: 0.7238 - val_loss: 0.7702 - val_acc: 0.7491
+Epoch 31/80
+168s - loss: 0.7886 - acc: 0.7268 - val_loss: 0.7642 - val_acc: 0.7495
+Epoch 32/80
+168s - loss: 0.7725 - acc: 0.7349 - val_loss: 0.7938 - val_acc: 0.7360
+Epoch 33/80
+167s - loss: 0.7618 - acc: 0.7376 - val_loss: 0.7460 - val_acc: 0.7514
+Epoch 34/80
+170s - loss: 0.7502 - acc: 0.7425 - val_loss: 0.7284 - val_acc: 0.7588
+Epoch 35/80
+171s - loss: 0.7444 - acc: 0.7434 - val_loss: 0.7357 - val_acc: 0.7562
+Epoch 36/80
+168s - loss: 0.7359 - acc: 0.7477 - val_loss: 0.7489 - val_acc: 0.7476
+Epoch 37/80
+167s - loss: 0.7298 - acc: 0.7495 - val_loss: 0.7465 - val_acc: 0.7542
+Epoch 38/80
+167s - loss: 0.7173 - acc: 0.7519 - val_loss: 0.7377 - val_acc: 0.7507
+Epoch 39/80
+168s - loss: 0.7124 - acc: 0.7555 - val_loss: 0.7338 - val_acc: 0.7585
+Epoch 40/80
+168s - loss: 0.6968 - acc: 0.7594 - val_loss: 0.7314 - val_acc: 0.7630
+Epoch 41/80
+166s - loss: 0.6901 - acc: 0.7625 - val_loss: 0.7131 - val_acc: 0.7664
+Epoch 42/80
+166s - loss: 0.6918 - acc: 0.7618 - val_loss: 0.7013 - val_acc: 0.7629
+Epoch 43/80
+170s - loss: 0.6827 - acc: 0.7641 - val_loss: 0.7513 - val_acc: 0.7505
+Epoch 44/80
+167s - loss: 0.6784 - acc: 0.7663 - val_loss: 0.6836 - val_acc: 0.7769
+Epoch 45/80
+166s - loss: 0.6642 - acc: 0.7709 - val_loss: 0.6596 - val_acc: 0.7865
+Epoch 46/80
+166s - loss: 0.6552 - acc: 0.7724 - val_loss: 0.6731 - val_acc: 0.7773
+Epoch 47/80
+168s - loss: 0.6501 - acc: 0.7765 - val_loss: 0.6953 - val_acc: 0.7776
+Epoch 48/80
+167s - loss: 0.6506 - acc: 0.7757 - val_loss: 0.6778 - val_acc: 0.7838
+Epoch 49/80
+167s - loss: 0.6403 - acc: 0.7776 - val_loss: 0.6414 - val_acc: 0.7875
+Epoch 50/80
+166s - loss: 0.6384 - acc: 0.7801 - val_loss: 0.7035 - val_acc: 0.7652
+Epoch 51/80
+169s - loss: 0.6309 - acc: 0.7835 - val_loss: 0.6987 - val_acc: 0.7674
+Epoch 52/80
+168s - loss: 0.6274 - acc: 0.7823 - val_loss: 0.6433 - val_acc: 0.7885
+Epoch 53/80
+168s - loss: 0.6170 - acc: 0.7866 - val_loss: 0.6679 - val_acc: 0.7769
+Epoch 54/80
+166s - loss: 0.6134 - acc: 0.7873 - val_loss: 0.6179 - val_acc: 0.7975
+Epoch 55/80
+168s - loss: 0.6105 - acc: 0.7877 - val_loss: 0.6232 - val_acc: 0.7972
+Epoch 56/80
+168s - loss: 0.6042 - acc: 0.7910 - val_loss: 0.6345 - val_acc: 0.7947
+Epoch 57/80
+166s - loss: 0.6033 - acc: 0.7909 - val_loss: 0.6371 - val_acc: 0.7910
+Epoch 58/80
+166s - loss: 0.5982 - acc: 0.7933 - val_loss: 0.6091 - val_acc: 0.8006
+Epoch 59/80
+173s - loss: 0.5859 - acc: 0.7977 - val_loss: 0.6342 - val_acc: 0.7910
+Epoch 60/80
+167s - loss: 0.5840 - acc: 0.7981 - val_loss: 0.6104 - val_acc: 0.7938
+Epoch 61/80
+166s - loss: 0.5836 - acc: 0.7994 - val_loss: 0.6452 - val_acc: 0.7860
+Epoch 62/80
+166s - loss: 0.5855 - acc: 0.7977 - val_loss: 0.6687 - val_acc: 0.7804
+Epoch 63/80
+168s - loss: 0.5753 - acc: 0.8020 - val_loss: 0.6308 - val_acc: 0.7923
+Epoch 64/80
+168s - loss: 0.5690 - acc: 0.8035 - val_loss: 0.5936 - val_acc: 0.8029
+Epoch 65/80
+166s - loss: 0.5662 - acc: 0.8049 - val_loss: 0.6097 - val_acc: 0.7984
+Epoch 66/80
+160s - loss: 0.5642 - acc: 0.8051 - val_loss: 0.5970 - val_acc: 0.7991
+Epoch 67/80
+170s - loss: 0.5596 - acc: 0.8063 - val_loss: 0.6172 - val_acc: 0.7996
+Epoch 68/80
+167s - loss: 0.5519 - acc: 0.8082 - val_loss: 0.5865 - val_acc: 0.8082
+Epoch 69/80
+166s - loss: 0.5526 - acc: 0.8080 - val_loss: 0.5956 - val_acc: 0.7991
+Epoch 70/80
+166s - loss: 0.5453 - acc: 0.8124 - val_loss: 0.5707 - val_acc: 0.8092
+Epoch 71/80
+168s - loss: 0.5480 - acc: 0.8096 - val_loss: 0.6223 - val_acc: 0.7922
+Epoch 72/80
+168s - loss: 0.5438 - acc: 0.8118 - val_loss: 0.5871 - val_acc: 0.8079
+Epoch 73/80
+168s - loss: 0.5367 - acc: 0.8121 - val_loss: 0.6015 - val_acc: 0.8028
+Epoch 74/80
+166s - loss: 0.5403 - acc: 0.8118 - val_loss: 0.5933 - val_acc: 0.8032
+Epoch 75/80
+169s - loss: 0.5299 - acc: 0.8159 - val_loss: 0.5879 - val_acc: 0.8038
+Epoch 76/80
+167s - loss: 0.5226 - acc: 0.8196 - val_loss: 0.5909 - val_acc: 0.8032
+Epoch 77/80
+168s - loss: 0.5290 - acc: 0.8174 - val_loss: 0.6040 - val_acc: 0.8007
+Epoch 78/80
+169s - loss: 0.5255 - acc: 0.8177 - val_loss: 0.5685 - val_acc: 0.8144
+Epoch 79/80
+169s - loss: 0.5198 - acc: 0.8194 - val_loss: 0.5527 - val_acc: 0.8145
+Epoch 80/80
+169s - loss: 0.5106 - acc: 0.8224 - val_loss: 0.5666 - val_acc: 0.8129
+Accuracy: 81.28%
+
+Process finished with exit code 0
