@@ -68,9 +68,9 @@ model.add(Dropout(0.2))
 model.add(Dense(num_classes, activation='softmax'))
 
 epochs = 100
-learning_rate = 0.01
-decay = learning_rate / epochs
-sgd = SGD(lr=learning_rate, momentum=0.9, decay=decay, nesterov=False)
+# learning_rate = 0.01
+# decay = learning_rate / epochs
+# sgd = SGD(lr=learning_rate, momentum=0.9, decay=decay, nesterov=False)
 model.compile(loss='categorical_crossentropy', optimizer='adadelta', metrics=['accuracy'])
 print(model.summary())
 
@@ -81,7 +81,6 @@ model.fit_generator(
     samples_per_epoch=X_train.shape[0],
     nb_epoch=epochs,
     validation_data=(X_test, y_test),
-    nb_val_samples=300000,
     verbose=2)
 
 scores = model.evaluate(X_test, y_test, verbose=0)
