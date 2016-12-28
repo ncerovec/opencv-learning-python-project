@@ -9,13 +9,13 @@ from sklearn.externals import joblib
 from scipy.cluster.vq import *
 from sklearn.preprocessing import StandardScaler
 
-# Get the path of the training set
-parser = ap.ArgumentParser()
-parser.add_argument("-t", "--trainingSet", help="Path to Training Set", required="True")
-args = vars(parser.parse_args())
+# Paths
+s = os.path.sep
+dataFolder = 'DATA'
+trainSetFolder = 'train-400'
 
 # Get the training classes names and store them in a list
-train_path = args["trainingSet"]
+train_path = dataFolder+s+trainSetFolder
 training_names = os.listdir(train_path)
 
 # Get all the path to the images and save them in a list
